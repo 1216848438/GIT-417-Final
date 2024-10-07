@@ -1,0 +1,156 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*CSS reset above. Below is my CSS */
+
+:root {
+	--background-color: #1c1c1c;
+	--text-color: white;
+	--button-background-color: #333;
+	--border-color: #555;
+	--button-text-color: white;
+	--button-hover-background-color: #900;
+	--footer-text-color: #bbb;
+}
+
+[data-theme = "light"] {
+	--background-color: white;
+	--text-color: black;
+	--button-background-color: #ddd;
+	--border-color: #ccc;
+	--button-hover-background-color: #f00;
+	--button-text-color: black;
+	--footer-text-color: #333;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 1280px;
+	font-family: Arial, sans-serif;
+	margin: 0 auto;
+	padding: 0;
+	background-color: var(--background-color); 
+	color: var(--text-color);
+	text-align: center;
+}
+
+header {
+	text-align: center;
+	background-color: #e10600;
+	color: var(--text-color);
+	padding: 20px 0;
+}
+
+h1 {
+	color: var(--text-color);
+	font-size: 3rem;
+	font-weight: bold;
+}
+h2 {
+  font-size: 1.25rem;
+}
+
+nav {
+  padding: 20px;
+}
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	display: inline;
+	margin: 0 15px;
+}
+
+#product-section, #game-section, #contact-section {
+	padding: 40px 0;
+}
+
+#game-section {
+	background-color: #e10600;
+}
+
+#product-display img {
+	width: 400px;
+	height: auto;
+	margin: 25px;
+}
+
+button {
+	background-color: var(--button-background-color);
+	color: var(--button-text-color);
+	border: none;
+	padding: 10px 20px;
+	margin: 10px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--button-hover-background-color);
+}
+
+form label, form input, form textarea {
+	display: block;
+	margin: 10px auto;
+}
+
+form label {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+footer {
+	padding: 20px;
+	background-color: var(--button-background-color);
+}
+
+footer p {
+	color: var(--footer-text-color);
+}

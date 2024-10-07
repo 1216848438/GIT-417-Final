@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>F1 Ultimate Merchandise</title> 
+        <link rel = "stylesheet" href = "styles.css">
+        <script src = "script.js" defer></script>
+    </head>
+
+    <body data-theme = "dark">
+        <header>
+            <h1>F1 Ultimate Merchandise</h1>
+            <nav>
+                <ul>
+                    <li><a href = "#product-section">Products</a></li>
+                    <li><a href = "#game-section">Guessing Game</a></li>
+                    <li><a href = "#contact-section">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button id = "toggle-theme" class = "toggle-btn">Toggle Light & Dark Modes</button>
+        </header>
+
+        <section id = "product-section">
+            <h2>F1 Posters</h2>
+            <div id = "product-display">
+            </div>
+            <div id = "controls">
+                <button id = "previous-product">Previous</button>
+                <button id = "next-product">Next</button>
+            </div>
+        </section>
+
+        <section id = "game-section">
+            <h2>Guess the Winning Car</h2>
+            <p>Choose a car number between 1 and 10. If your guess matches, you win!</p>
+            <form id = "guess-form">
+                <input type = "number" id = "car-guess" placeholder = "Enter car number" min = "1" max = "10" required>
+                <button type = "submit">Submit Guess</button>
+                </form>
+            <p id = "game-result"></p>
+        </section>
+<!-- contact form-->
+        <section id = "contact-section">
+            <h2>Contact Us</h2>
+            <form id = "contact-form">
+                <label for = "name">Full Name:</label>
+                <input type = "text" id = "name" name = "name" required>
+                <p class = "error" id = "name-error"></p>
+
+                <label for = "phone">Phone Number:</label>
+                <input type = "tel" id = "phone" name = "phone" required>
+                <p class = "error" id = "phone-error"></p>
+
+                <label for = "email">Email:</label>
+                <input type = "email" id = "email" name = "email" required>
+                <p class = "error" id = "email-error"></p>
+
+                <!-- radio button to choose contact method-->
+                <fieldset>
+                    <legend>Preferred Contact Method:</legend>
+                    <label for = "contact-phone">
+                        <input type = "radio" id = "contact-phone" name = "contact-method" value = "phone" required>
+                        Phone
+                    </label>
+
+                    <label for = "contact-email">
+                        <input type = "radio" id = "contact-email" name = "contact-method" value = "email">
+                        Email
+                    </label>
+                </fieldset>
+
+                <label for = "comment">Message:</label>
+                <textarea id = "comment" name = "message" required></textarea>
+                <p class = "error" id = "comment-error"></p>
+                
+                <button type = "submit">Submit</button>
+            </form>
+            <p id = "form-result"></p>
+        </section>
+        <footer>
+            <p>&copy: 2024 F1 Ultimate Merchandise</p>
+        </footer>
+    </body>
+</html>
