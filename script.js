@@ -27,6 +27,7 @@ const product = [
 
 let currentProduct = 0;
 
+//displaying the products, in this case F1 posters.
 function display() {
     const productDisplay = document.getElementById("product-display");
     const {name, picture, description, cost} = product[currentProduct];
@@ -48,6 +49,7 @@ document.getElementById("next-product").addEventListener("click", function() {
     display();
 });
 
+//this is the Guessing game that I have formatted for the F1 theme. Users will choose a car #, and if it matches, they win. 
 document.getElementById("guess-form").addEventListener("submit", function(e) {
     e.preventDefault();
     const userGuess = parseInt(document.getElementById("car-guess").value, 10);
@@ -85,7 +87,8 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         isValid = false;
         document.getElementById("comment-error").textContent = "Comment is required.";
     }
-
+    
+    //as per instructions, required regex validation for phone and email.
     const phoneValidation = /^\+?[0-9]{10,15}$/;
     const emailValidation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -106,6 +109,7 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
             comment: comment
         };
 
+        //thanking the user and reset form
         document.getElementById("form-result").textContent = `Thank you very much, ${customer.name}! We'll contact you by your chosen method.`;
         document.getElementById("contact-form").reset();
     }
